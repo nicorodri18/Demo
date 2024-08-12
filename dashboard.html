@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Panel de Administración</h1>
+        
+        <p>Estadísticas de consentimientos:</p>
+        <ul>
+            <li>Fotografías: <span id="photoStats">0</span></li>
+            <li>Datos biométricos: <span id="biometricStats">0</span></li>
+            <li>Datos personales: <span id="dataStats">0</span></li>
+        </ul>
+        
+        <form id="consentForm">
+            <h2>Formulario de Consentimiento</h2>
+            <label>
+                <input type="checkbox" id="photoConsent">
+                Autorizo el uso de fotografías.
+            </label>
+            <label>
+                <input type="checkbox" id="biometricConsent">
+                Autorizo el uso de datos biométricos.
+            </label>
+            <label>
+                <input type="checkbox" id="dataConsent">
+                Autorizo el uso de mis datos personales.
+            </label>
+            <button type="button" class="btn" onclick="submitConsent()">Enviar Consentimiento</button>
+        </form>
+        
+        <div class="terms-links">
+            <a href="autorizacion_biometricos.pdf" target="_blank" class="btn">Ver Autorización Biométricos</a>
+            <a href="autorizacion.pdf" target="_blank" class="btn">Ver Autorización General</a>
+            <a href="datos_personales.pdf" target="_blank" class="btn">Ver Datos Personales</a>
+        </div>
+
+        <button onclick="clearData();" class="btn">Borrar Datos</button>
+        <button onclick="logout();" class="btn">Cerrar Sesión</button>
+        <a href="index.html" class="btn back-btn">Regresar</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

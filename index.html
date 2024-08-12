@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - Aplicación Habeas Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a la Aplicación de Habeas Data</h1>
+        <div class="button-group">
+            <a href="login.html" class="btn">Iniciar Sesión</a>
+            <a href="register.html" class="btn">Registrarse</a>
+            <a href="dashboard.html" class="btn">Panel de Administración</a>
+        </div>
+    </div>
+    <script>
+        // Verificar si el usuario ya está logueado y redirigir al dashboard
+        if (sessionStorage.getItem('sessionToken')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>
